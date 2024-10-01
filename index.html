@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">  <!-- TODO -->
+  <meta name="keywords" content="FGP">  <!-- TODO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGP</title>  <!-- TODO -->
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-60X60HDPC0"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-60X60HDPC0');
+  </script>
+
+
+  <!-- MathJax -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>        
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  });
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Flow-Centric Generative Planning for General-Purpose Robot Manipulation Tasks</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Zhenyu Wei</a><sup>1,2*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ariszxxu.github.io/">Zhixuan Xu</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Jingxiang Guo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://houyiwen.github.io/">Yiwen Hou</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chongkaigao.com/">Chongkai Gao</a><sup>1</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://linsats.github.io/">Lin Shao</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+            <br>
+            <span class="author-block">* denotes equal contribution</span>
+          </div> -->
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- teaser TODO
+<section class="hero teaser"></section>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="#"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        teaser video? TODO
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- Dexterous grasping is a fundamental yet challenging skill in robotic manipulation, 
+            requiring precise interaction between robotic hands and objects. In this paper, we 
+            present $\mathcal{D(R,O)}$ Grasp, a novel framework that models the interaction 
+            between the robotic hand in its grasping pose and the object, enabling broad 
+            generalization across various robot hands and object geometries. Our model takes 
+            the robot hand’s description and object point cloud as inputs and efficiently 
+            predicts kinematically valid and stable grasps, demonstrating strong adapt ability 
+            to diverse robot embodiments and object geometries. Extensive experiments conducted 
+            in both simulated and real world environments validate the effectiveness of our 
+            approach, with significant improvements in success rate, grasp diversity, and 
+            inference speed across multiple robotic hands. Our method achieves an average 
+            success rate of 87.53% in simulation in less than one second, tested on three 
+            different dexterous robotic hands, and also performs successfully in real-world 
+            experiments using LeapHand. $\mathcal{D(R,O)}$ Grasp provides a robust solution for 
+            dexterous grasping in complex and varied environments. -->
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    <!-- Overview -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline Overview</h2>
+        <!-- <div class="content has-text-justified">
+          <figure>
+            <img src="./static/images/pipeline.png" alt="Overview of D(R,O) Grasp framework">
+            <figcaption style="font-style: normal; font-size: 0.95em;">Overview of $\mathcal{D(R,O)}$ Grasp: We first pretrain the robot encoder with the proposed configuration-invariant
+              pretraining method. Then, we predict the $\mathcal{D(R,O)}$ representation between the robot and object point cloud. Finally, we
+              extract joint values from the $\mathcal{D(R,O)}$ representation.</figcaption>
+          </figure>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Overview -->
+
+    <!-- Paper video --> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <p>
+          TODO
+        </p>
+        <!--
+        <div class="publication-video">
+          <iframe src="#"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        -->
+      </div>
+    </div>
+    <!-- / Paper video -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTeX content TODO</code></pre>  <!-- TODO -->
+  </div>
+</section>
+
+</body>
+</html>
