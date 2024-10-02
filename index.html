@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.png">
+  <link rel="icon" href="./images/flow_world_model.jpg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -54,7 +54,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Flow-Centric Generative Planning for General-Purpose Robot Manipulation Tasks</h1>
+          <h1 class="title is-1 publication-title">FLIP: Flow-Centric Generative Planning for General-Purpose Manipulation Tasks</h1>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="#">Zhenyu Wei</a><sup>1,2*</sup>,
@@ -142,21 +142,24 @@
 </section>
 
 
-<!-- teaser TODO
+<!-- teaser -->
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="#"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        teaser video? TODO
-      </h2>
-    </div>
+    <h2 class="title is-3">Pipeline Overview</h2>
+        <div class="content has-text-justified">
+          <figure>
+            <img src="./images/teaser_value.png" alt="Overview of FLIP">
+            <figcaption style="font-style: normal; font-size: 0.95em;">Overview of our method. Left: 
+              FLIP is trained on video datasets across different tasks,
+              objects, and robots, with only one language description for each video as the goal. Right: we train an
+              interactive world model consisting of an action module for flow generation, a dynamics module for
+              video generation, and a value module for assigning value at each step. These modules can perform
+              flow-centric model-based planning for manipulation tasks on the flow and video space</figcaption>
+          </figure>
+        </div>
   </div>
 </section>
--->
+
 
 
 <section class="section">
@@ -167,21 +170,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <!-- Dexterous grasping is a fundamental yet challenging skill in robotic manipulation, 
-            requiring precise interaction between robotic hands and objects. In this paper, we 
-            present $\mathcal{D(R,O)}$ Grasp, a novel framework that models the interaction 
-            between the robotic hand in its grasping pose and the object, enabling broad 
-            generalization across various robot hands and object geometries. Our model takes 
-            the robot hand’s description and object point cloud as inputs and efficiently 
-            predicts kinematically valid and stable grasps, demonstrating strong adapt ability 
-            to diverse robot embodiments and object geometries. Extensive experiments conducted 
-            in both simulated and real world environments validate the effectiveness of our 
-            approach, with significant improvements in success rate, grasp diversity, and 
-            inference speed across multiple robotic hands. Our method achieves an average 
-            success rate of 87.53% in simulation in less than one second, tested on three 
-            different dexterous robotic hands, and also performs successfully in real-world 
-            experiments using LeapHand. $\mathcal{D(R,O)}$ Grasp provides a robust solution for 
-            dexterous grasping in complex and varied environments. -->
+            We aim to develop a model-based planning framework for world models that can be scaled 
+            with increasing model and data budgets for general-purpose manipulation tasks with only 
+            language and vision inputs. To this end, we present FLow-CentrIc generative Planning (FLIP), 
+            a model-based planning algorithm on visual space that features three key modules: 1. a multi-modal 
+            flow generation model as the general-purpose action proposal module; 2. a flow-conditioned video 
+            generation model as the dynamics module; and 3. a vision-language representation learning model 
+            as the value module. Given an initial image and language instruction as the goal, FLIP can 
+            progressively search for long-horizon flow and video plans that maximize the discounted return 
+            to accomplish the task. FLIP is able to synthesize long-horizon plans across objects, robots, 
+            and tasks with image flows as the general action representation, and the dense flow information 
+            also provides rich guidance for long-horizon video generation. In addition, the synthesized 
+            flow and video plans can guide the training of low-level control policies for robot execution.
+             Experiments on diverse benchmarks demonstrate that FLIP can improve both the success rates and quality 
+             of long-horizon video plan synthesis and has the interactive world model property, opening up 
+             wider applications for future works.
           </p>
         </div>
       </div>
@@ -191,15 +194,23 @@
     <!-- Overview -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Pipeline Overview</h2>
-        <!-- <div class="content has-text-justified">
+        <h2 class="title is-3">Three Modules of FLIP</h2>
+        <div class="content has-text-justified">
           <figure>
-            <img src="./static/images/pipeline.png" alt="Overview of D(R,O) Grasp framework">
-            <figcaption style="font-style: normal; font-size: 0.95em;">Overview of $\mathcal{D(R,O)}$ Grasp: We first pretrain the robot encoder with the proposed configuration-invariant
-              pretraining method. Then, we predict the $\mathcal{D(R,O)}$ representation between the robot and object point cloud. Finally, we
-              extract joint values from the $\mathcal{D(R,O)}$ representation.</figcaption>
+            <img src="./images/modules.png" alt="Action, Dynamics, and Value modules of FLIP.">
+            <figcaption style="font-style: normal; font-size: 0.95em;">Left: the tokenizing process of different
+              modalities in training data. Middle Left: we use a Conditional VAE to generate flows as actions. It sep-
+              arately generates the delta scale and directions on each query point for flow reconstruction. Middle Right:
+              we use a DiT model with the spatial-temporal attention mechanism for flow-conditioned video gen-
+              eration. Flows (and observation history) are conditioned with cross attention, while languages and
+              timestep are conditioned with AdaLN-zero. Right: The value module of FLIP. We fol-
+              low the idea of LIV and use time-
+              contrastive learning for the visual-language rep-
+              resentation, but we treat each video clip (rather
+              than each frame) as a state. The fine-tuned
+              value curves of LIV and ours are shown at bottom.</figcaption>
           </figure>
-        </div> -->
+        </div>
       </div>
     </div>
     <!--/ Overview -->
