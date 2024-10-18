@@ -149,7 +149,7 @@
 <!-- teaser -->
 <section class="hero teaser"></section>
   <div class="container is-max-desktop">
-        <div class="content has-text-justified">
+        <div class="content has-text-left">
           <figure>
             <img src="./images/teaser_value.png" alt="Overview of FLIP">
             <figcaption style="font-style: normal; font-size: 0.95em;">Left: 
@@ -202,7 +202,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Three Modules of FLIP</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-left">
           <figure>
             <img src="./images/modules.png" alt="Action, Dynamics, and Value modules of FLIP." style="width: 100%;">
             <figcaption style="font-style: normal; font-size: 0.95em;">Left: the tokenizing process of different
@@ -255,7 +255,7 @@
 
       <div class="content has-text-justified">
         <p>
-          We manually spcify image flows at different timesteps for several LIBERO-LONG takss to demonstrate the interactive property of FLIP. <br>
+          We manually spcify image flows for several LIBERO-LONG tasks to demonstrate the interactive property of FLIP. <br>
           Note the flows are different with the flows in the training dataset.
         </p>
       </div>
@@ -317,378 +317,550 @@
   </div>
 </section>
 
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">FMB Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 5 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
+    <h2 class="title is-3 has-text-centered">Failure Cases</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        We show the failure cases of FLIP. These are caused by the accumulated error during the planning.
+      </p>
     </div>
 
     <div class="columns is-multiline is-centered">
       <!-- Video 1 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/5.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/6.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/7.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 5 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/fmb/9.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Cloth Folding/Unfolding Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/folding/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/folding/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/folding/4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/folding/6.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 5 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/folding/8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-    </div>
-
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/unfolding/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/unfolding/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/unfolding/4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/unfolding/6.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 5 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 125px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/unfolding/8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Cube Manipualtion Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/cube/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/cube/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/cube/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/cube/3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Pen Spinning Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-quarter">
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/pen_spin/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/pen_spin/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
-      <div class="column is-one-fifth">
-      </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Tie Plastic Bags Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-quarter">
-        <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/plastic/0.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>        
-      </div>
-      <!-- Video 2 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/plastic/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 3 -->
-      <div class="column is-one-fifth">
-            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/plastic/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-      </div>
-      <!-- Video 4 -->
       <div class="column is-one-fifth">
         <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/plastic/3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>        
-      </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Aloha Simulation Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-quarter">
-        <video autoplay muted loop style="width: 200px; height: 150px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/aloha_sim/0.mp4" type="video/mp4">
+          <source src="videos/failure/0.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>        
       </div>
       <!-- Video 2 -->
-      <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 150px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/aloha_sim/1.mp4" type="video/mp4">
+      <div class="column is-one-fifth">
+            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
+            <source src="videos/failure/1.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
       </div>
       <!-- Video 3 -->
+      <div class="column is-one-fifth">
+            <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
+            <source src="videos/failure/2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+      </div>
+      <div class="column is-one-fifth">
+        <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
+          <source src="videos/failure/3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>        
+      </div>
+      <div class="column is-one-fifth">
+        <video autoplay muted loop style="width: 200px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
+          <source src="videos/failure/4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>        
+      </div>            
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Aloha Real Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="aloharealvideoViewer"
+          src="videos/aloha_real/0.mp4"
+          alt="Aloha Real Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
       <div class="column is-one-quarter">
-            <video autoplay muted loop style="width: 200px; height: 150px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/aloha_sim/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="aloharealIDLabel">0</span>
+          </div>
+          <input type="range" id="aloharealID" name="aloharealID" min="0" max="1" value="0" style="width: 200px; height: 15px;">
+        </div>
       </div>
-      <!-- Video 4 -->
+    </div>
+  </div>
+</section>
+
+<script>
+  const aloharealvideoViewer = document.getElementById('aloharealvideoViewer');
+  const aloharealIDSlider = document.getElementById('aloharealID');
+  const aloharealIDLabel = document.getElementById('aloharealIDLabel');
+
+  function updateVideo() {
+    const aloharealselectedID = aloharealIDSlider.value;
+
+    aloharealIDLabel.textContent = aloharealselectedID;
+    
+    aloharealvideoViewer.src = `videos/aloha_real/${aloharealselectedID}.mp4`;
+  }
+
+  aloharealIDSlider.addEventListener('input', updateVideo);
+</script>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Aloha Sim Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="alohasimvideoViewer"
+          src="videos/aloha_sim/0.mp4"
+          alt="Aloha Sim Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
       <div class="column is-one-quarter">
-        <video autoplay muted loop style="width: 200px; height: 150px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/aloha_sim/3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>        
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="alohasimIDLabel">0</span>
+          </div>
+          <input type="range" id="alohasimID" name="alohasimID" min="0" max="3" value="0" style="width: 200px; height: 15px;">
+        </div>
       </div>
+    </div>
   </div>
 </section>
+
+<script>
+  const alohasimvideoViewer = document.getElementById('alohasimvideoViewer');
+  const alohasimIDSlider = document.getElementById('alohasimID');
+  const alohasimIDLabel = document.getElementById('alohasimIDLabel');
+
+  function updateVideo() {
+    const alohasimselectedID = alohasimIDSlider.value;
+
+    alohasimIDLabel.textContent = alohasimselectedID;
+    
+    alohasimvideoViewer.src = `videos/aloha_sim/${alohasimselectedID}.mp4`;
+  }
+
+  alohasimIDSlider.addEventListener('input', updateVideo);
+</script>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Aloha Real Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-half">
-        <video autoplay muted loop style="width: 400px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/aloha_real/0.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>        
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">FMB Benchmark Results</h2>
       </div>
-      <!-- Video 2 -->
-      <div class="column is-one-half">
-            <video autoplay muted loop style="width: 400px; height: 200px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/aloha_real/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="fmbvideoViewer"
+          src="videos/fmb/0.mp4"
+          alt="FMB Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
       </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="fmbIDLabel">0</span>
+          </div>
+          <input type="range" id="fmbID" name="fmbID" min="0" max="9" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  const fmbvideoViewer = document.getElementById('fmbvideoViewer');
+  const fmbIDSlider = document.getElementById('fmbID');
+  const fmbIDLabel = document.getElementById('fmbIDLabel');
+
+  function updateVideo() {
+    const fmbselectedID = fmbIDSlider.value;
+
+    fmbIDLabel.textContent = fmbselectedID;
+    
+    fmbvideoViewer.src = `videos/fmb/${fmbselectedID}.mp4`;
+  }
+
+  fmbIDSlider.addEventListener('input', updateVideo);
+</script>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Egg Peeling Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-third">
-        <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-          <source src="videos/egg/0.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>        
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Cube Results</h2>
       </div>
-      <!-- Video 2 -->
-      <div class="column is-one-third">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/egg/1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="cubevideoViewer"
+          src="videos/cube/0.mp4"
+          alt="Cube Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
       </div>
-      <!-- Video 3 -->
-      <div class="column is-one-third">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/egg/2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="cubeIDLabel">0</span>
+          </div>
+          <input type="range" id="cubeID" name="cubeID" min="0" max="3" value="0" style="width: 200px; height: 15px;">
+        </div>
       </div>
+    </div>
   </div>
 </section>
+
+<script>
+  const cubevideoViewer = document.getElementById('cubevideoViewer');
+  const cubeIDSlider = document.getElementById('cubeID');
+  const cubeIDLabel = document.getElementById('cubeIDLabel');
+
+  function updateVideo() {
+    const cubeselectedID = cubeIDSlider.value;
+
+    cubeIDLabel.textContent = cubeselectedID;
+    
+    cubevideoViewer.src = `videos/cube/${cubeselectedID}.mp4`;
+  }
+
+  cubeIDSlider.addEventListener('input', updateVideo);
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Egg Peeling Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="eggvideoViewer"
+          src="videos/egg/0.mp4"
+          alt="Egg Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="eggIDLabel">0</span>
+          </div>
+          <input type="range" id="eggID" name="eggID" min="0" max="2" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const eggvideoViewer = document.getElementById('eggvideoViewer');
+  const eggIDSlider = document.getElementById('eggID');
+  const eggIDLabel = document.getElementById('eggIDLabel');
+
+  function updateVideo() {
+    const eggselectedID = eggIDSlider.value;
+
+    eggIDLabel.textContent = eggselectedID;
+    
+    eggvideoViewer.src = `videos/egg/${eggselectedID}.mp4`;
+  }
+
+  eggIDSlider.addEventListener('input', updateVideo);
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Folding Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="foldingvideoViewer"
+          src="videos/folding/0.mp4"
+          alt="Folding Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="foldingIDLabel">0</span>
+          </div>
+          <input type="range" id="foldingID" name="foldingID" min="0" max="9" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const foldingvideoViewer = document.getElementById('foldingvideoViewer');
+  const foldingIDSlider = document.getElementById('foldingID');
+  const foldingIDLabel = document.getElementById('foldingIDLabel');
+
+  function updateVideo() {
+    const foldingselectedID = foldingIDSlider.value;
+
+    foldingIDLabel.textContent = foldingselectedID;
+    
+    foldingvideoViewer.src = `videos/folding/${foldingselectedID}.mp4`;
+  }
+
+  foldingIDSlider.addEventListener('input', updateVideo);
+</script>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Fruit Peeling Results</h2>
-    <div class="columns is-multiline is-centered">
-      <!-- Video 1 -->
-      <div class="column is-one-third">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Unfolding Results</h2>
       </div>
-      <!-- Video 2 -->
-      <div class="column is-one-third">
-            <video autoplay muted loop style="width: 200px; height: 120px; object-fit: cover; border-radius: 0;" controlsList="nodownload noremoteplayback noprogressbar">
-            <source src="videos/peel/0.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="unfoldingvideoViewer"
+          src="videos/unfolding/0.mp4"
+          alt="Unfolding Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
       </div>
-      <!-- Video 3 -->
-      <div class="column is-one-third">
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="unfoldingIDLabel">0</span>
+          </div>
+          <input type="range" id="unfoldingID" name="unfoldingID" min="0" max="9" value="0" style="width: 200px; height: 15px;">
+        </div>
       </div>
+    </div>
   </div>
 </section>
+
+<script>
+  const unfoldingvideoViewer = document.getElementById('unfoldingvideoViewer');
+  const unfoldingIDSlider = document.getElementById('unfoldingID');
+  const unfoldingIDLabel = document.getElementById('unfoldingIDLabel');
+
+  function updateVideo() {
+    const unfoldingselectedID = unfoldingIDSlider.value;
+
+    unfoldingIDLabel.textContent = unfoldingselectedID;
+    
+    unfoldingvideoViewer.src = `videos/unfolding/${unfoldingselectedID}.mp4`;
+  }
+
+  unfoldingIDSlider.addEventListener('input', updateVideo);
+</script>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Pen Spin Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="penspinvideoViewer"
+          src="videos/pen_spin/0.mp4"
+          alt="Pen Spin Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="penspinIDLabel">0</span>
+          </div>
+          <input type="range" id="penspinID" name="penspinID" min="0" max="2" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const penspinvideoViewer = document.getElementById('penspinvideoViewer');
+  const penspinIDSlider = document.getElementById('penspinID');
+  const penspinIDLabel = document.getElementById('penspinIDLabel');
+
+  function updateVideo() {
+    const penspinselectedID = penspinIDSlider.value;
+
+    penspinIDLabel.textContent = penspinselectedID;
+    
+    penspinvideoViewer.src = `videos/pen_spin/${penspinselectedID}.mp4`;
+  }
+
+  penspinIDSlider.addEventListener('input', updateVideo);
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Tying Plastic Bag Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="plasticvideoViewer"
+          src="videos/plastic/0.mp4"
+          alt="Plastic Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="plasticIDLabel">0</span>
+          </div>
+          <input type="range" id="plasticID" name="plasticID" min="0" max="3" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const plasticvideoViewer = document.getElementById('plasticvideoViewer');
+  const plasticIDSlider = document.getElementById('plasticID');
+  const plasticIDLabel = document.getElementById('plasticIDLabel');
+
+  function updateVideo() {
+    const plasticselectedID = plasticIDSlider.value;
+
+    plasticIDLabel.textContent = plasticselectedID;
+    
+    plasticvideoViewer.src = `videos/plastic/${plasticselectedID}.mp4`;
+  }
+
+  plasticIDSlider.addEventListener('input', updateVideo);
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Fruit Peel Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="peelvideoViewer"
+          src="videos/peel/0.mp4"
+          alt="peel Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="peelIDLabel">0</span>
+          </div>
+          <input type="range" id="peelID" name="peelID" min="0" max="0" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const peelvideoViewer = document.getElementById('peelvideoViewer');
+  const peelIDSlider = document.getElementById('peelID');
+  const peelIDLabel = document.getElementById('peelIDLabel');
+
+  function updateVideo() {
+    const peelselectedID = peelIDSlider.value;
+
+    peelIDLabel.textContent = peelselectedID;
+    
+    peelvideoViewer.src = `videos/peel/${peelselectedID}.mp4`;
+  }
+
+  peelIDSlider.addEventListener('input', updateVideo);
+</script>
+
 
 
 
