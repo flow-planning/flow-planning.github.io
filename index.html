@@ -250,6 +250,105 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Real World Policy Results: Tea Scooping</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="teascoopingvideoViewer"
+          src="videos/real_tea_scooping/0.mp4"
+          alt="Tea Scooping Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="teascoopingIDLabel">0</span>
+          </div>
+          <input type="range" id="teascoopingID" name="teascoopingID" min="0" max="4" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const teascoopingvideoViewer = document.getElementById('teascoopingvideoViewer');
+  const teascoopingIDSlider = document.getElementById('teascoopingID');
+  const teascoopingIDLabel = document.getElementById('teascoopingIDLabel');
+
+  function updateVideo() {
+    const teascoopingselectedID = teascoopingIDSlider.value;
+
+    teascoopingIDLabel.textContent = teascoopingselectedID;
+    
+    teascoopingvideoViewer.src = `videos/real_tea_scooping/${teascoopingselectedID}.mp4`;
+  }
+
+  teascoopingIDSlider.addEventListener('input', updateVideo);
+</script>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Real World Policy Results: Cloth Unfolding</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <!-- Single Video Viewer -->
+      <div class="column is-half" style="display: flex; flex-direction: column; align-items: center;">
+        <video
+          id="realclothunfoldingvideoViewer"
+          src="videos/real_cloth_unfolding/0.mp4"
+          alt="Tea Scooping Video"
+          controls
+          style="width: 100%; height: auto; border: 3px solid #66c0ff; border-radius: 15px;">
+        </video>
+      </div>
+
+      <div class="column is-one-quarter">
+        <div class="slider-container" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 20px;">
+          <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+            Select Video ID: 
+            <span id="realclothunfoldingIDLabel">0</span>
+          </div>
+          <input type="range" id="realclothunfoldingID" name="realclothunfoldingID" min="0" max="4" value="0" style="width: 200px; height: 15px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const realclothunfoldingvideoViewer = document.getElementById('realclothunfoldingvideoViewer');
+  const realclothunfoldingIDSlider = document.getElementById('realclothunfoldingID');
+  const realclothunfoldingIDLabel = document.getElementById('realclothunfoldingIDLabel');
+
+  function updateVideo() {
+    const realclothunfoldingselectedID = realclothunfoldingIDSlider.value;
+
+    realclothunfoldingIDLabel.textContent = realclothunfoldingselectedID;
+    
+    realclothunfoldingvideoViewer.src = `videos/real_cloth_unfolding/${realclothunfoldingselectedID}.mp4`;
+  }
+
+  realclothunfoldingIDSlider.addEventListener('input', updateVideo);
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Interactive World Model Results</h2>
     <div class="columns is-multiline is-centered">
 
