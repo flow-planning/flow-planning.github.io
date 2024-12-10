@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">  <!-- TODO -->
-  <meta name="keywords" content="FGP">  <!-- TODO -->
+  <meta name="keywords" content="FLIP">  <!-- TODO -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FGP</title>  <!-- TODO -->
+  <title>FLIP</title>  <!-- TODO -->
 
 
   <!-- Google tag (gtag.js) -->
@@ -49,6 +49,28 @@
     <!-- visitor statistics -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+  <style>
+    .colored-title {
+      font-weight: bold;
+    }
+    .colored-title .f {
+      color: #FF4B4B;  /* 红色 */
+      text-shadow: 2px 2px 4px rgba(255, 75, 75, 0.3);
+    }
+    .colored-title .l {
+      color: #FF8A00;  /* 橙色 */
+      text-shadow: 2px 2px 4px rgba(255, 138, 0, 0.3);
+    }
+    .colored-title .i {
+      color: #0099FF;  /* 蓝色 */
+      text-shadow: 2px 2px 4px rgba(0, 153, 255, 0.3);
+    }
+    .colored-title .p {
+      color: #009944;  /* 更深的绿色 */
+      text-shadow: 2px 2px 4px rgba(0, 153, 68, 0.3);
+    }
+  </style>
+
 </head>
 <body>
 
@@ -58,7 +80,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">FLIP: Flow-Centric Generative Planning for General-Purpose Manipulation Tasks</h1>
+          <h1 class="title is-1 publication-title">
+            <span class="colored-title">
+              <span class="f">F</span><span class="l">L</span><span class="i">I</span><span class="p">P</span>
+            </span>: Flow-Centric Generative Planning for General-Purpose Manipulation Tasks
+          </h1>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="#">Zhenyu Wei</a><sup>1,2*</sup>,
@@ -145,24 +171,38 @@
   </div>
 </section>
 
-
-<!-- teaser -->
-<section class="hero teaser"></section>
-  <div class="container is-max-desktop">
-        <div class="content has-text-left">
-          <figure>
-            <img src="./images/teaser_value.png" alt="Overview of FLIP">
-            <figcaption style="font-style: normal; font-size: 0.95em;">Left: 
-              FLIP is trained on video datasets across different tasks,
-              objects, and robots, with only one language description for each video as the goal.
-              <br> Right: we train an
-              interactive world model consisting of an action module for flow generation, a dynamics module for
-              video generation, and a value module for assigning value at each step. These modules can perform
-              flow-centric model-based planning for manipulation tasks on the flow and video space</figcaption>
-          </figure>
-        </div>
+<!-- 添加视频部分 -->
+<section class="hero teaser">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+        <!-- Video element -->
+        <div class="publication-video" style="width: 100%; min-height: auto; overflow: visible; margin-bottom: 2rem;">
+          <video style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;" controls controlsList="nodownload" autoplay muted loop>
+            <source src="videos/FLIP_teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>      
+    </div>
   </div>
 </section>
+
+<!-- teaser图片部分 -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="content has-text-left">
+      <figure>
+        <img src="./images/teaser_value.png" alt="Overview of FLIP">
+        <figcaption style="font-style: normal; font-size: 0.95em;">Left: 
+          FLIP is trained on video datasets across different tasks,
+          objects, and robots, with only one language description for each video as the goal.
+          <br> Right: we train an
+          interactive world model consisting of an action module for flow generation, a dynamics module for
+          video generation, and a value module for assigning value at each step. These modules can perform
+          flow-centric model-based planning for manipulation tasks on the flow and video space</figcaption>
+      </figure>
+    </div>
+  </div>
+</section> -->
 
 
 
@@ -174,56 +214,66 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We aim to develop a model-based planning framework for world models that can be scaled 
-            with increasing model and data budgets for general-purpose manipulation tasks with only 
-            language and vision inputs. To this end, we present FLow-CentrIc generative Planning (FLIP), 
-            a model-based planning algorithm on visual space that features three key modules: 1. a multi-modal 
-            flow generation model as the general-purpose action proposal module; 2. a flow-conditioned video 
-            generation model as the dynamics module; and 3. a vision-language representation learning model 
-            as the value module. Given an initial image and language instruction as the goal, FLIP can 
-            progressively search for long-horizon flow and video plans that maximize the discounted return 
-            to accomplish the task. FLIP is able to synthesize long-horizon plans across objects, robots, 
-            and tasks with image flows as the general action representation, and the dense flow information 
-            also provides rich guidance for long-horizon video generation. In addition, the synthesized 
-            flow and video plans can guide the training of low-level control policies for robot execution.
-             Experiments on diverse benchmarks demonstrate that FLIP can improve both the success rates and quality 
-             of long-horizon video plan synthesis and has the interactive world model property, opening up 
-             wider applications for future works.
+            We aim to develop a model-based planning framework for world models that can 
+            be scaled with increasing model and data budgets for general-purpose manipulation 
+            tasks with only language and vision inputs. <br> <br>
+            
+            To this end, we present <b>FL</b>ow centr<b>I</b>c generative <b>P</b>lanning (FLIP), a model-based planning algorithm on visual 
+            space that features three key modules: 1. a multi-modal flow generation model
+            as the general-purpose action proposal module; 2. a flow-conditioned video generation model as the dynamics 
+            module; and 3. a vision-language representation learning model as the value module. Given 
+            an initial image and language instruction as the goal, FLIP can progressively search for long-horizon flow and video
+            plans that maximize the discounted return to accomplish the task. FLIP is able to synthesize long-horizon 
+            plans across objects, robots, and tasks with image flows as the general action representation, and 
+            the dense flow information also provides rich guidance for long-horizon video generation. 
+            In addition, the synthesized flow and video plans can guide the training of low-level control 
+            policies for robot execution. <br> <br>
+            
+            Experiments on diverse benchmarks demonstrate that FLIP can improve
+            both the success rates and quality of long-horizon video plan synthesis and has the interactive 
+            world model property, opening up wider applications for future works.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract -->
+  </div>
+</section>
 
-    <br>
-
-
+<section class="hero teaser"></section>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
     <!-- Overview -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Three Modules of FLIP</h2>
         <div class="content has-text-left">
-          <figure>
-            <img src="./images/modules.png" alt="Action, Dynamics, and Value modules of FLIP." style="width: 100%;">
-            <figcaption style="font-style: normal; font-size: 0.95em;">Left: the tokenizing process of different
-              modalities in training data. <br> Middle Left: we use a Conditional VAE to generate flows as actions. It sep-
-              arately generates the delta scale and directions on each query point for flow reconstruction. <br> Middle Right:
-              we use a DiT model with the spatial-temporal attention mechanism for flow-conditioned video gen-
-              eration. Flows (and observation history) are conditioned with cross attention, while languages and
-              timestep are conditioned with AdaLN-zero. <br> Right: The value module of FLIP. We fol-
-              low the idea of LIV and use time-
-              contrastive learning for the visual-language rep-
-              resentation, but we treat each video clip (rather
-              than each frame) as a state. The fine-tuned
-              value curves of LIV and ours are shown at bottom.</figcaption>
-          </figure>
+          <div class="container" style="max-width: 2400px;">
+            <figure>
+              <img src="./images/modules.png" alt="Action, Dynamics, and Value modules of FLIP." style="width: 100%;">
+              <div style="display: flex; justify-content: center;"> 
+                <figcaption style="font-style: normal; font-size: 1em; max-width: 800px; margin: auto; text-align: left;"> <!-- 添加 text-align: left; -->
+                  Left: the tokenizing process of different modalities in training data.
+                  <br> 
+                  Middle Left: we use a Conditional VAE to generate flows as actions. It separately generates the delta scale and directions on each query point for flow reconstruction. 
+                  <br> 
+                  Middle Right: we use a DiT model with the spatial-temporal attention mechanism for flow-conditioned video generation. Flows (and observation history) are conditioned with cross attention, while languages and timestep are conditioned with AdaLN-zero. 
+                  <br> 
+                  Right: The value module of FLIP. We follow the idea of LIV and use time-contrastive learning for the visual-language representation, but we treat each video clip (rather than each frame) as a state. The fine-tuned value curves of LIV and ours are shown at bottom.
+                </figcaption>
+              </div>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
     <!--/ Overview -->
-
+    </div>
+  </div>
+</section>
     <br>
-
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Paper video --> 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
@@ -244,7 +294,29 @@
       </div>
     </div>
     <div style="clear: both;"></div>
-    <!-- / Paper video -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Low level --> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">LIBERO-LONG Low-Level Policy Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              We use the flow and video plans from FLIP  to train a low-level conditional diffusion policy on the LIBERO-LONG
+              tasks, and achieve better results than previous methods. Among them, Ours-FV achieves the best results, showing the 
+              advantages of using both flow and video conditions.
+            </p>
+          </div>
+          <!-- Image element -->
+          <div class="publication-image" style="width: 100%; min-height: auto; overflow: visible;">
+            <img src="images/low_level.png" alt="Low level policy results" style="width: 100%; height: auto; object-fit: contain;">
+          </div>   
+      </div>
+    </div>
   </div>
 </section>
 
